@@ -143,4 +143,4 @@ export default class WebTerminal extends HTMLElement {
     shadow.append($formTerminal)
   }
 }
-customElements.define("web-terminal", WebTerminal);
+customElements.define("terminal-web", WebTerminal);

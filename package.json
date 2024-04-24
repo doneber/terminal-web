@@ -6,9 +6,9 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/doneber/web-terminal.git"
+    "url": "git+https://github.com/doneber/terminal-web.git"
   },
-  "homepage": "https://doneber.github.io/web-terminal",
+  "homepage": "https://doneber.github.io/terminal-web",
   "keywords": [
     "terminal",
     "web",
