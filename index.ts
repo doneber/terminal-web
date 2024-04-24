@@ -1,3 +1,3 @@
-import WebTerminal from './src/WebTerminal';
+import WebTerminal from './src/TerminalWeb';
 
 export { WebTerminal }
