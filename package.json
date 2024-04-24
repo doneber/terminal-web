@@ -1,8 +1,23 @@
 {
   "name": "web-terminal",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.1-beta",
+  "description": "A terminal build with web technologies",
+  "main": "index.ts",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/doneber/web-terminal"
+  },
+  "keywords": [
+    "terminal",
+    "web",
+    "html",
+    "css",
+    "js"
+  ],
+  "author": "Eber",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
