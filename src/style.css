@@ -1,0 +1,9 @@
+:root {
+  color-scheme: light dark;
+}
+
+
+.terminal-container {
+  width: 350px;
+  height: 150px;
+}
