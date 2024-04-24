@@ -1,14 +1,14 @@
 {
-  "name": "web-terminal",
-  "private": true,
+  "name": "terminal-web",
   "version": "0.0.1-beta",
   "description": "A terminal build with web technologies",
   "main": "index.ts",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/doneber/web-terminal"
+    "url": "git+https://github.com/doneber/web-terminal.git"
   },
+  "homepage": "https://doneber.github.io/web-terminal",
   "keywords": [
     "terminal",
     "web",
