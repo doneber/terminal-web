@@ -1,7 +1,7 @@
 import TerminalView from "./TerminalView.ts"
 import CommandInterpreter from "./CommandInterpreter.ts"
 
-class WebTerminal extends HTMLElement {
+export default class WebTerminal extends HTMLElement {
   constructor() {
     super();
     
