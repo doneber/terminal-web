@@ -1,7 +1,7 @@
 import TerminalView from "./TerminalView.ts"
 import CommandInterpreter from "./CommandInterpreter.ts"
 
-export default class WebTerminal extends HTMLElement {
+export default class TerminalWeb extends HTMLElement {
   constructor() {
     super();
     
@@ -143,4 +143,4 @@ export default class WebTerminal extends HTMLElement {
     shadow.append($formTerminal)
   }
 }
-customElements.define("terminal-web", WebTerminal);
+customElements.define("terminal-web", TerminalWeb);
