@@ -1,9 +1,15 @@
 {
   "name": "terminal-web",
-  "version": "0.0.3-beta",
+  "version": "0.0.4-beta",
   "description": "A terminal build with web technologies",
-  "main": "index.ts",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
   "type": "module",
+  "module": "dist/terminal-web.esm.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/doneber/terminal-web.git"
@@ -20,10 +26,11 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsdx build",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "tsdx": "^0.14.1",
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
   }
