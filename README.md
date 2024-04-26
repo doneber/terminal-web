@@ -1,10 +1,18 @@
 # Terminal Web
 
-A web component to simulate the terminal of a common Linux Terminal.
+A web component to simulate the a Linux Terminal.
 
-## Instalación
+Run some common commands like:
 
-With NPM:
+- `help`
+- `echo`
+- `catsay`
+- `history`
+- `whoami`
+- `pwd`
+
+
+## Installation
 
 ```bash
 npm i terminal-web
@@ -12,16 +20,32 @@ npm i terminal-web
 
 ## Usage
 
-In a Javascript file for example `main.js`
+### Via module
 
 ```js
 import "terminal-web"
 
 ```
 
+### Via CDN
+
+```html
+<script type="module" src="https://unpkg.com/terminal-web"></script>
+```
+
+### Using the component
+
 Then you can do this:
 
 ```html
 <terminal-web></terminal-web>
+```
+
+To custom it, you can wrap it with a container, add user and host name.
+
+```html
+<div style="width: 300px; height: 150px;">
+  <terminal-web username="tom" hostname="ate"></terminal-web>
+</div>
 ```
 
