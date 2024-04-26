@@ -17,10 +17,8 @@ export default class TerminalWeb extends HTMLElement {
     const $history = document.createElement("div");
     $history.classList.add("history");
     const $input = document.createElement("div");
-    $history.innerHTML = `
-    <div class="line">
-      Try to run "catsay"
-    </div>
+    $history.innerHTML = /*html*/`
+      <slot name="text-line"></slot>
     `
     $input.classList.add("input");
     $formTerminal.append($history);
@@ -91,8 +89,9 @@ export default class TerminalWeb extends HTMLElement {
   }
   
   static get style() {
-    return `
-    form * {
+    
+    return /*css*/`
+    * {
       font-family: monospace, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       margin: 0;  
       padding: 0;  

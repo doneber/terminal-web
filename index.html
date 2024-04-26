@@ -4,19 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Terminal</title>
-    <style>
-      .terminal-container {
-        width: 350px;
-        height: 150px;
-      }
-    </style>
   </head>
   <body>
     <h1>The Web Terminals</h1>
     <p>A simulations with HTML, CSS & JS of a Linux Terminal</p>
     <h3>Terminal 1</h3>
-    <div class="terminal-container">
-      <terminal-web username="tom" hostname="ate"></terminal-web>
+    <div style="width: 450px; height: 150px;">
+      <terminal-web username="tom" hostname="ate">
+        <div slot="text-line">Good morning!</span></div>
+        <div slot="text-line">Welcome to <span style="background-color: teal">Terminal-Web</span></div>
+      </terminal-web>
     </div>
     <br />
     <h3>Terminal 2</h3>
