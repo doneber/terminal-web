@@ -45,6 +45,7 @@ export default class TerminalWeb extends HTMLElement {
       const formData = new FormData(eventTarget);
       const text = formData.get("text") as string;
 
+      // extract the comman of the input text field
       const [textCommand, ...args] = text.trim().split(" ");
 
       terminalView.addToHistory(text);

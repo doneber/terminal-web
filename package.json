@@ -1,6 +1,6 @@
 {
   "name": "terminal-web",
-  "version": "0.1.0-beta",
+  "version": "0.2.0-beta",
   "description": "A terminal build with web technologies",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
