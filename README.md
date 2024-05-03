@@ -2,7 +2,9 @@
 
 A web component to simulate the a Linux Terminal.
 
-Run some common commands like:
+To list the commands available you can run `help`
+
+Then you can see commands like:
 
 - `help`
 - `echo`
@@ -10,7 +12,6 @@ Run some common commands like:
 - `history`
 - `whoami`
 - `pwd`
-
 
 ## Installation
 
@@ -56,4 +57,4 @@ Note: Notice the slot "text-line"
 
 ## Try it
 
-You can play wit it in this [playground](https://codi.link/PGRpdiBzdHlsZT0id2lkdGg6IDQ1MHB4OyBoZWlnaHQ6IDE1MHB4OyI+DQogIDx0ZXJtaW5hbC13ZWIgdXNlcm5hbWU9InRvbSIgaG9zdG5hbWU9ImF0ZSI+DQogICAgPGRpdiBzbG90PSJ0ZXh0LWxpbmUiPkdvb2QgbW9ybmluZyE8L3NwYW4+PC9kaXY+DQogICAgPGRpdiBzbG90PSJ0ZXh0LWxpbmUiPldlbGNvbWUgdG8gPHNwYW4gc3R5bGU9ImJhY2tncm91bmQtY29sb3I6IHRlYWwiPlRlcm1pbmFsLVdlYjwvc3Bhbj48L2Rpdj4NCiAgPC90ZXJtaW5hbC13ZWI+DQo8L2Rpdj4=%7C%7CaW1wb3J0ICdodHRwczovL3VucGtnLmNvbS90ZXJtaW5hbC13ZWIvZGlzdC90ZXJtaW5hbC13ZWIuY2pzLnByb2R1Y3Rpb24ubWluLmpzJzsK)
+You can play with it in this [playground](https://codi.link/PGRpdiBjbGFzcz0iY29udGFpbmVyIj4NCiAgPCEtLSBDb21wb25lbnQg8J+RhyAtLT4NCiAgPHRlcm1pbmFsLXdlYiB1c2VybmFtZT0idG9tIiBob3N0bmFtZT0iYXRlIj4NCiAgICA8ZGl2IHNsb3Q9InRleHQtbGluZSI+V2VsY29tZSB0byBUZXJtaW5hbC1XZWI8L2Rpdj4NCiAgPC90ZXJtaW5hbC13ZWI+DQo8L2Rpdj4=%7CLmNvbnRhaW5lciB7DQogIHdpZHRoOiA0NTBweDsNCiAgaGVpZ2h0OiAxNTBweDsNCn0=%7CaW1wb3J0ICdodHRwczovL3VucGtnLmNvbS90ZXJtaW5hbC13ZWIvZGlzdC90ZXJtaW5hbC13ZWIuY2pzLnByb2R1Y3Rpb24ubWluLmpzJw==)
