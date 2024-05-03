@@ -1,48 +1,34 @@
-import { levenshteinDistance } from "./utils"
+import { levenshteinDistance, basicCommandsList } from "./utils"
+import Command from "./Command"
 
 export default class CommandInterpreter {
-  commands: Map<string, (args: any) => void | string>
-  commandHistory: string[]
+  commands: Map<string, Command>
+  commandHistory: string[] = []
 
   constructor() {
     // atributes
-    this.commands = new Map()
-    this.commandHistory = []
+    this.commands = new Map(Object.entries(basicCommandsList))
 
-    // commands
-    this.commands.set("echo", (args) => {
-      return args.join(" ")
-    })
-    this.commands.set("whoami", () => {
-      return "doneber"
-    })
+    // coupled commands
+    this.commands.set("history", new Command({
+      shortDescription: "GPU History Library",
+      executor: () => {
+        return this.getHistory()
+          .map((command, index) => `${index + 1} ${command}`)
+          .join("<br>")
+      }
+    }))
 
-    this.commands.set("pwd", () => {
-      return "/home/doneber"
-    })
-
-    this.commands.set("history", () => {
-      return this.getHistory()
-        .map((command, index) => `${index + 1} ${command}`)
-        .join("<br>")
-    })
-
-    this.commands.set("catsay", () => {
-      return `<pre>
-&nbsp/&#92_/&#92  
-( o.o ) 
-&nbsp> ^ <
-</pre>
-      `
-    })
-
-    this.commands.set("help", () => {
-      let commandsHelp = ""
-      this.commands.forEach((_, commandName) => {
-        commandsHelp += commandName + "<br>"
-      })
-      return commandsHelp
-    })
+    this.commands.set("help", new Command({
+      shortDescription: "Display information about builtin commands.",
+      executor: () => {
+        let commandsHelp = ""
+        this.commands.forEach((command, commandName) => {
+          commandsHelp += `${commandName} ${command.usage} - ${command.shortDescription}<br>`
+        })
+        return commandsHelp
+      }
+    }))
   }
 
   executeCommand(commandName: string, args: any) {
@@ -50,7 +36,7 @@ export default class CommandInterpreter {
 
     this.addToHistory(commandName, args)
 
-    const commandFunction = this.commands.get(commandName)
+    const commandFunction = this.commands.get(commandName)?.executor
 
     if (commandFunction) {
       return commandFunction(args)
@@ -58,7 +44,7 @@ export default class CommandInterpreter {
       // Recommend another similar command
       for (const [name] of this.commands) {
         if (levenshteinDistance(commandName, name) === 1)
-        return `Command not found: ${commandName}, did you mean '${name}'?`
+          return `Command '${commandName}' not found, did you mean '${name}'?`
       }
       return `Command not found: ${commandName}`
     }
