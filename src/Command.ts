@@ -1,4 +1,4 @@
-type ExecutorType = (args?: any) => string | undefined
+type ExecutorType = (args?: string[]) => string | undefined
 
 export default class Command {
   usage: string

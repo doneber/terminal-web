@@ -21,17 +21,24 @@ export default class CommandInterpreter {
 
     this.commands.set("help", new Command({
       shortDescription: "Display information about builtin commands.",
-      executor: () => {
-        let commandsHelp = ""
-        this.commands.forEach((command, commandName) => {
-          commandsHelp += `${commandName} ${command.usage} - ${command.shortDescription}<br>`
-        })
-        return commandsHelp
+      executor: (args) => {
+        if (!args?.length) {
+          let commandsHelp = "Available commands:<br>"
+          this.commands.forEach((command, commandName) => {
+            commandsHelp += `&emsp;${commandName} ${command.usage} - ${command.shortDescription}<br>`
+          })
+          return commandsHelp
+        }
+        else {
+          const commandFound = this.commands.get(args[0])
+          return commandFound ? `${args[0]}: ${commandFound.shortDescription}` : `help: no help topics match '${args[0]}'`
+
+        }
       }
     }))
   }
 
-  executeCommand(commandName: string, args: any) {
+  executeCommand(commandName: string, args: string[]) {
     if (!commandName) return
 
     this.addToHistory(commandName, args)
